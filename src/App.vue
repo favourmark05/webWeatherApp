@@ -168,7 +168,7 @@ main{
   text-align: center;
   padding: 10px 25px;
 }
-.credit > h2 > a {
+.credit > h4 > a {
   color: white;
 }
 .button{
