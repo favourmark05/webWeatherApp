@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="credit">
-        <h2>App built by <a href="https://mfonidomark.netlify.app/" target="_blank" rel="noopener noreferrer">Mfonido Mark</a></h2>
+        <h4>App built by <a href="https://mfonidomark.netlify.app/" target="_blank" rel="noopener noreferrer">Mfonido Mark</a></h4>
       </div>
     </main>
   </div>
