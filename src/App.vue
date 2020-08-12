@@ -9,6 +9,7 @@
         v-model="query"
         @keypress="fetchWeather"
         />
+        <button @click="fetchWeather" class="button">search</button>
       </div>
       <div class="wearther-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
@@ -41,7 +42,7 @@ export default {
   },
   methods: {
     fetchWeather (e) {
-      if (e.key == "Enter") {
+      if (e.key == "Enter" || Event ) {
         fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
         .then(res => {
           return res.json();
@@ -165,5 +166,15 @@ main{
 }
 .credit > h2 > a {
   color: white;
+}
+.button{
+  background-color: rgb(24, 158, 151);
+  color: white;
+  border: 4px solid rgb(24,158,151);
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 25px;
+  cursor:pointer;
+  /* font-style: bold; */
 }
 </style>
