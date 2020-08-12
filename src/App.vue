@@ -91,6 +91,10 @@ body{
 
 #app.warm{
   background-image: url('https://media.giphy.com/media/paMdZlRXlc96o/giphy.gif');
+  background-size: cover;
+  background-position: bottom;
+  /* height: 100vh; */
+  transition: 0.4s;
 }
 main{
   min-height: 100vh;
