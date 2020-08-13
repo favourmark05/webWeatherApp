@@ -121,6 +121,15 @@ body{
   /* height: 100vh; */
   transition: 0.4s;
 }
+#app.rain{
+
+}
+#app.clear{
+
+}
+#app.clouds{
+
+}
 main{
   min-height: 100vh;
   padding: 25px;
