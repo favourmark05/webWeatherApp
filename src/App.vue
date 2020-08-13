@@ -1,6 +1,10 @@
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' &&  weather.main.temp >= 20 ? 'warm' : ''">
     <main>
+      <div class="header">
+        <h1>Raffia weather App</h1>
+        <p>Welcome to Raffia city weather Application to search for your current <br/> weather location,please insert the location inside the search box and click search to get accurate weather report</p>
+      </div>
       <div class="search-box">
         <input 
         type="text"  
@@ -46,6 +50,7 @@ export default {
         fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
         .then(res => {
           return res.json();
+          // console.log(res.json())
           // return console.log(res.json())
         }).then(this.setResults);
     }
@@ -72,6 +77,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -79,6 +85,25 @@ export default {
 }
 body{
   font-family: 'montsrrat', sans-serif;
+}
+.header > h1 {
+  font-size: 3rem;
+  background: url('https://media.giphy.com/media/kbp9DrzPsP6rRhcQGY/giphy.gif');
+  background-position: bottom;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin: 10px 25px;
+  font-family: 'Luckiest Guy', cursive;
+  text-shadow: 2px 5px white;
+}
+.header > p {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* width: 300px; */
+  /* position: */
 }
 #app{
   background-image: url('https://media.giphy.com/media/BDucPOizdZ5AI/giphy.gif');
